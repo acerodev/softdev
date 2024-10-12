@@ -24,7 +24,7 @@ session_start();
             <div class="card ">
               <div class="card-header">
                 <h3 class="card-title"><b>Forma de Pagos</b></h3>
-                <button class="btn btn-info btn-sm float-right" onclick="AbrirModalRegistroFormaPago();"><i class="fas fa-plus"></i> Nuevo</button>
+                <button class="btn btn-info btn-sm float-right" onclick="AbrirModalRegistroFormaPago();"><i class="fas fa-plus"></i> Nuevo</button> <!-- BOTON HABILITADO -->
               </div>
               <div class="card-body">
               <div class="row">

@@ -316,6 +316,85 @@ require_once '../../model/modelo_gasto.php';
 
        });
 
+       /* ############################################################### */
+       /* MIS CAMBIOS DE BUSCAR DNI */
+
+       /*===================================================================*/
+        //HABILITAR BOTONES DE BUSQUEDAD
+        /*===================================================================*/
+        function buscarDniRuc() {
+            var tipoDoc = $("#select_tipo_doc").val();
+            //console.log(tipoDoc);
+
+            if (tipoDoc == 'DNI') {
+                $("#buscarDni").attr('hidden', false);
+                $("#buscarRuc").attr('hidden', true);
+                $("#text_dni").val("");
+                $("#text_direccion").val("");
+            } else if (tipoDoc == 'R.U.C') {
+                $("#buscarDni").attr('hidden', true);
+                $("#buscarRuc").attr('hidden', false);
+                $("#text_dni").val("");
+            } else {
+                alert('Debe Seleccione un tipo de documento');
+                // Toast.fire({
+                //     icon: 'error',
+                //     title: 'Debe Seleccione un tipo de documento'
+                // })
+
+                $("#buscarDni").attr('hidden', true);
+                $("#buscarRuc").attr('hidden', true);
+            }
+
+        }
+
+        /*************************************************************************
+                 FUNCION PARA LLAMAR LOS DATOS DE RENIEC DESDE API
+        ***************************************************************************/
+        $('#buscarDni').click(function() {
+            dni = $('#text_dni').val();
+            $.ajax({
+                url: '../controller/reniec/consultaDNI.php',
+                type: 'post',
+                data: 'dni=' + dni,
+                dataType: 'json',
+                success: function(r) {
+                    if (r.numeroDocumento == dni) {
+                        // $('#text_ape_p').val(r.apellidoPaterno);
+                        // $('#text_ape_m').val(r.apellidoMaterno);
+                        $('#text_nombre').val(r.nombres + ' ' + r.apellidoPaterno + ' ' + r
+                            .apellidoMaterno);
+                    } else {
+                        alert(r.error);
+                    }
+                    //console.log(r)
+                }
+            });
+        });
+
+        $('#buscarRuc').click(function() {
+            ruc = $('#text_dni').val();
+            $.ajax({
+                url: '../controller/reniec/consultaRUC.php',
+                type: 'post',
+                data: 'ruc=' + ruc,
+                dataType: 'json',
+                success: function(r) {
+                    if (r.numeroDocumento == ruc) {
+                        // $('#text_ruc').val(r.numeroDocumento);//ruc
+                        $('#text_direccion').val(r.direccion); //direccion
+                        $('#text_nombre').val(r.nombre); //razon
+                    } else {
+                        alert(r.error);
+                    }
+                    // console.log(r)
+                }
+            });
+        });
+
+        /* ############################################################### */
+       /* AQUÍ TERMINA MIS CAMBIOS DE BUSCAR DNI */
+
 
 
        /********************************************************************

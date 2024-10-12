@@ -1001,7 +1001,7 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
               <!-- TACTIL -->
               <div class="col-3 col-xs-12">
                 <div class="form-group"><i class="fas fa-hand-pointer"></i>
-                  <label>Tactil:</label> <br>
+                  <label>Tactil/Touch:</label> <br>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Si" name="text_tactil_si" id="text_tactil_si">
                     <label class="form-check-label">Si</label>
@@ -1018,7 +1018,7 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
               <div class="col-3 col-xs-12">
                 <div class="form-group">
                   <i class="fas fa-mobile"></i>
-                  <label>Imagen:</label> <br>
+                  <label>Imagen/Pantalla:</label> <br>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Si" name="text_img_si" id="text_img_si">
                     <label class="form-check-label">Si</label>
@@ -1068,8 +1068,8 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
               <!-- Sensor Aprox -->
               <div class="col-3 col-xs-12">
                 <div class="form-group">
-                  <i class="fas fa-assistive-listening-systems"></i>
-                  <label>Sensor Aprox:</label> <br>
+                  <i class="fas fa-plug"></i>
+                  <label>Cable/Cargador:</label> <br>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Si" name="text_sensor_si" id="text_sensor_si">
                     <label class="form-check-label">Si</label>
@@ -1170,7 +1170,7 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
               <div class="col-3 col-xs-12">
                 <div class="form-group">
                   <i class="fas fa-pause-circle"></i>
-                  <label>Btn Lateral:</label> <br>
+                  <label>Btn Lateral/Teclado:</label> <br>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Si" name="text_lateral_si" id="text_lateral_si">
                     <label class="form-check-label">Si</label>
@@ -1187,7 +1187,7 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
               <div class="col-3 col-xs-12">
                 <div class="form-group">
                   <i class="fas fa-camera"></i>
-                  <label>camara:</label> <br>
+                  <label>Cámara:</label> <br>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Si" name="text_camara_si" id="text_camara_si">
                     <label class="form-check-label">Si</label>
@@ -1204,7 +1204,7 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
               <div class="col-3 col-xs-12">
                 <div class="form-group">
                   <i class="fas fa-battery-three-quarters"></i>
-                  <label>Bateria:</label> <br>
+                  <label>Batería:</label> <br>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Si" name="text_bateria_si" id="text_bateria_si">
                     <label class="form-check-label">Si</label>
@@ -1221,7 +1221,7 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
               <div class="col-3 col-xs-12">
                 <div class="form-group">
                   <i class="fas fa-headphones"></i>
-                  <label>Auricular:</label> <br>
+                  <label>Auricular/Altavoz:</label> <br>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Si" name="text_auricu_si" id="text_auricu_si">
                     <label class="form-check-label">Si</label>
@@ -1238,7 +1238,7 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
               <div class="col-3 col-xs-12">
                 <div class="form-group">
                   <i class="fas fa-microphone"></i>
-                  <label>Mocrofono:</label> <br>
+                  <label>Micrófono:</label> <br>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Si" name="text_microfo_si" id="text_microfo_si">
                     <label class="form-check-label">Si</label>
@@ -1528,6 +1528,46 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
       }
 
 
+      $('#buscarDni').click(function() {
+            dni = $('#text_dni').val();
+            $.ajax({
+                url: '../controller/reniec/consultaDNI.php',
+                type: 'post',
+                data: 'dni=' + dni,
+                dataType: 'json',
+                success: function(r) {
+                    if (r.numeroDocumento == dni) {
+                        // $('#text_ape_p').val(r.apellidoPaterno);
+                        // $('#text_ape_m').val(r.apellidoMaterno);
+                        $('#text_nombre').val(r.nombres + ' ' + r.apellidoPaterno + ' ' + r
+                            .apellidoMaterno);
+                    } else {
+                        alert(r.error);
+                    }
+                    //console.log(r)
+                }
+            });
+        });
+
+        $('#buscarRuc').click(function() {
+            ruc = $('#text_dni').val();
+            $.ajax({
+                url: '../controller/reniec/consultaRUC.php',
+                type: 'post',
+                data: 'ruc=' + ruc,
+                dataType: 'json',
+                success: function(r) {
+                    if (r.numeroDocumento == ruc) {
+                        // $('#text_ruc').val(r.numeroDocumento);//ruc
+                        $('#text_direccion').val(r.direccion); //direccion
+                        $('#text_nombre').val(r.nombre); //razon
+                    } else {
+                        alert(r.error);
+                    }
+                    // console.log(r)
+                }
+            });
+        });
 
 
       /********************************************************************

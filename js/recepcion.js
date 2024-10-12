@@ -829,7 +829,7 @@ function AbrirModalRegistroRecepcion() {//se jala en el boton nuevo
 	//document.getElementById('text_producto').value="";
 	LimpiarModalRecepcion();//limpiar texbox cada que demos en nuevo
 	$('.form-control').removeClass("is-invalid").removeClass("is-valid");//remover las clases
-	//codigo_barr();
+	codigo_barr();
 	limpiarTabla_regiInsumos();
 	limpiarTabla_regiEquipo();
 }
@@ -839,7 +839,7 @@ function codigo_barr() {
 	let codigocelrecep="";
     let f = new Date();
     //nombrefoto="PROD"
-    codigocelrecep=f.getDate()+""+(f.getMonth()+1)+""+f.getFullYear()+""+f.getHours()+""+f.getMilliseconds();
+    codigocelrecep=f.getDate()+""+(f.getMonth()+1)+""+f.getFullYear()+""+f.getHours()+""+f.getMinutes()+""+f.getSeconds()+""+f.getMilliseconds();
 
     var codeb =  Date.now();
     var c = document.getElementById('text_codigo_r');

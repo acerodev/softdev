@@ -11,7 +11,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login</title>
-
+  <link rel="icon" href="logoonecomputer.png" type="image/png">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -24,7 +24,7 @@
 <body class="hold-transition login-page" >
 <div class="login-box">
   <!-- /.login-logo -->
-  <div class="card card-outline card-primary">
+  <div class="card card-outline card-info">
     <div class="card-header text-center">
       <a href="index.php" class="h2"><b>Iniciar Sesion</b></a>
     </div>
@@ -49,7 +49,7 @@
         </div>
         <div class="row">
           <div class="col-8">
-            <div class="icheck-primary">
+            <div class="icheck-info">
               <input type="checkbox" id="remember">
               <label for="remember">
                 Recordar
@@ -58,7 +58,7 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block" onclick="Inciar_Sesion()">Ingresar</button>
+            <button type="submit" class="btn btn-info btn-block" onclick="Inciar_Sesion()">Ingresar</button>
           </div>
           <!-- /.col -->
         </div>

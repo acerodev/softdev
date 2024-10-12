@@ -176,10 +176,10 @@ session_start();
                     </div>
 
 
-                    <!-- <br> -->
-                    <!-- <hr> -->
-                    <!-- <h5 style="text-align:center;">Subir datos desde excel</h5> -->
-                    <!-- <br> -->
+                    <!-- <br>
+                    <hr>
+                    <h5 style="text-align:center;">Subir datos desde excel</h5>
+                    <br> -->
                     <div class="row" hidden>
 
                         <div class="col-12  ">

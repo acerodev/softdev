@@ -56,7 +56,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo $nombre_sist2['data'][0]['confi_nombre_sistema']; ?> </title>
-
+    <!-- <link rel="icon" href="../logoimg.png" type="image/png"> -->
+    <link rel="icon" href="../<?php echo $nombre_sist2['data'][0]['config_foto']; ?>" type="image/png" class="brand-image img-circle elevation-3">
+    
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
@@ -148,7 +150,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <aside class="main-sidebar sidebar-dark-info elevation-4">
             <!-- Brand Logo -->
             <a href="index.php" class="brand-link">
                 <img src="../<?php echo $nombre_sist2['data'][0]['config_foto']; ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3">
@@ -307,6 +309,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 foreach ($datos as $row) {
                                     if ($row["grupo_id"] == "13") {
                                         ?>
+                                        <!-- <li class="nav-item" style="background-color: #20c997;"> -->
                                         <li class="nav-item">
                                             <a href="#" class="nav-link" onclick="cargar_contenido('contenido_principal','<?php echo $row['men_ruta'];?>')">
                                                 <i class="fas fa-shopping-cart nav-icon"></i>
