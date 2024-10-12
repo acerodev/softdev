@@ -946,12 +946,10 @@ while ($row1 = $resultado->fetch_assoc()) {
 
         $html .= '
         <p align="justify" style="font-size: 10.5px; color:#404040;">CLAUSULAS: </p>
-        <p align="justify" style="font-size: 10.5px; color:#404040;">  1: Si el dispositivo no se puede verificar, no asumimos responsabilidad por componentes que no funcionen correctamente despu&eacute;s de la reparaci&oacute;n. 
-        2: Las reparaciones de pantallas no tienen garant&iacute;a en caso de golpes, humedad o mal uso por parte del cliente. 
-        3: En algunas reparaciones, no se usar&aacute;n piezas originales, sino compatibles y de calidad.  
-        4: La firma del cliente autoriza a <b>'.$row1['confi_razon_social'].'</b> para realizar trabajos en los dispositivos entregados.
-        5: Despu&eacute;s de que <b>'.$row1['confi_razon_social'].'</b> informe al cliente sobre el estado de su dispositivo, si pasan 60 d&iacute;as, la empresa no se hace responsable del mismo.
-        6: TODAS NUESTRAS REPARACIONES TIENEN 3 MESE DE GARANTIA.
+        <p align="justify" style="font-size: 10.5px; color:#404040;"> <b> 1. Evaluaci&oacute;n Previa: </b> Realizaremos una evaluaci&oacute;n inicial del/los dispositivo(s) para determinar las reparaciones necesarias antes de proceder. <br>      
+        <b> 2. Autorizaci&oacute;n: </b> Al firmar, el cliente autoriza a <b>'.$row1['confi_razon_social'].'</b> para realizar las intervenciones necesarias para reparar el/los dispositivo(s) entregado(s). <br>
+        <b> 3. Tiempo de Retiro: </b> Despu&eacute;s de que <b>'.$row1['confi_razon_social'].'</b> informe al cliente sobre el estado del/los dispositivo(s), el cliente tiene 60 d&iacute;as calendario para recogerlo(s), pasado este tiempo, no nos hacemos responsables por su conservaci&oacute;n o estado.
+        
         </p>
         <br><br>
         <table>
