@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 require '../conexion_reportes/r_conexion.php';
-$mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => [80, 50]]);
+$mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => [90, 55]]);
 $query = "SELECT
 	MAX(configuracion.confi_razon_social) as confi_razon_social,
 	MAX(configuracion.confi_ruc) as confi_ruc, 
@@ -11,8 +11,9 @@ $query = "SELECT
 	MAX(configuracion.confi_celular) as confi_celular, 
 
 	recepcion.rece_id, 
-	recepcion.cliente_id, 
-	cliente.cliente_nombres, 
+	recepcion.cliente_id,
+	cliente.cliente_nombres,
+	cliente.cliente_celular,
 	recepcion.rece_equipo, 
 	recepcion.rece_caracteristicas, 
 	recepcion.motivo_id, 
@@ -95,7 +96,12 @@ $html.='
 
 				<tr>
 						<td colspan="1" style="text-align:left;" ><b>Cliente:</b> </td> 
-						<td colspan="6" style="text-align:left;" >'.$row1['cliente_nombres'].' </td>  
+						<td colspan="6" style="text-align:left;" >'.$row1['cliente_nombres'].' </td>
+				</tr>
+
+				<tr>
+						<td colspan="1" style="text-align:left;" ><b>Celular:</b> </td> 
+						<td colspan="6" style="text-align:left;" >'.$row1['cliente_celular'].' </td>
 				</tr>
 
 				<tr>
