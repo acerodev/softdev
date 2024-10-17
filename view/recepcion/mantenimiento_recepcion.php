@@ -117,7 +117,7 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
               </div>
 
               <div class="col-lg-8 col-12">
-                <label>Observacion:</label>
+                <label>Observacion del equipo:</label>
                 <input type="text" id="text_accesorios" class="form-control form-control-sm" onkeyup="mayus(this);" placeholder="Observacion">
               </div>
               <div class="col-lg-4 col-12">
@@ -159,7 +159,7 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
                       <a class="nav-link active small text" id="equipos-tab" data-toggle="pill" href="#equipos" role="tab" aria-controls="equipos" aria-selected="true">Equipos Recepcionados</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link small text" id="insumos-tab" data-toggle="pill" href="#insumos" role="tab" aria-controls="insumos" aria-selected="false">Insumos</a>
+                      <a class="nav-link small text" id="insumos-tab" data-toggle="pill" href="#insumos" role="tab" aria-controls="insumos" aria-selected="false">Insumos a utilizar</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link small text" id="fotos-tab" data-toggle="pill" href="#fotos" role="tab" aria-controls="fotos" aria-selected="false">Fotos</a>
@@ -181,11 +181,11 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
                           <input type="text" class="form-control form-control-sm" id="text_serie2" placeholder="Serie">
                         </div>
                         <div class="col-lg-3 col-6">
-                          <label form="">Monto:</label>
+                          <label form="">Costo de servicio:</label>
                           <input type="text" name="" class="form-control form-control-sm" id="text_monto2" placeholder="Monto">
                         </div>
                         <div class="col-lg-3 col-6">
-                          <label form="">Abono:</label>
+                          <label form="">Adelanto:</label>
                           <input type="text" name="" class="form-control form-control-sm" id="text_pendite2" value="0" placeholder="Abono">
                         </div>
 
@@ -403,7 +403,7 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
               </div>
 
               <div class="col-lg-12 col-12" hidden>
-                <label>Observacion:</label>
+                <label>Observacion del equipo:</label>
                 <input type="text" id="text_accesorios_editar" class="form-control form-control-sm" onkeyup="mayus(this);" placeholder="Observacion">
               </div>
               <div class="col-lg-12 col-12">
@@ -490,7 +490,7 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
                           <input type="number" name="" class="form-control form-control-sm" id="text_monto2_e" value="0" placeholder="Monto">
                         </div>
                         <div class="col-lg-3 col-6">
-                          <label form="">Abono:</label>
+                          <label form="">Adelanto:</label>
                           <input type="number" name="" class="form-control form-control-sm" id="text_pendite2_e" value="0" placeholder="Abono">
                         </div>
                         <div class="col-lg-11 col-12">
@@ -774,7 +774,7 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
                                 <th>Equipo</th>
                                 <th>Falla</th>
                                 <th>Monto</th>
-                                <th>Abono</th>
+                                <th>Adelanto</th>
                                 <th>Diagnostico</th>
                                 <!-- <th>Accion</th> -->
                               </tr>

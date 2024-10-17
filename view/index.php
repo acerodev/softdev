@@ -205,7 +205,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-tags"></i>
                                 <p>
-                                    Recepción
+                                    Recepción de Equipos
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>

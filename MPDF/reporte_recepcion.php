@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 require '../conexion_reportes/r_conexion.php';
-$mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => [80, 187]]);
+$mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => [80, 210]]);
 $query = "SELECT
 		MAX(configuracion.confi_razon_social) as confi_razon_social,
 	MAX(configuracion.confi_ruc) as confi_ruc, 
@@ -81,18 +81,19 @@ $html.='
 		odd-footer-name: html_myfooter1;
 		}
 </style>
-	<h3 style="text-align:center;display: inline-block;margin: 0px;padding: 0px; ">'.$row1['confi_razon_social'].'</h3>
-	<h5 style="text-align:center;display: inline-block;margin: 0px;padding: 0px;  font-weight:normal;">R.U.C '.$row1['confi_ruc'].'</h5><br>
+	<h3 style="font-size: 16px; text-align:center; display: inline-block; margin: 0px; padding: 0px; ">'.$row1['confi_razon_social'].'</h3>
+	<h4 style="text-align:center;display: inline-block;margin: 0px;padding: 0px;  font-weight:normal;">R.U.C '.$row1['confi_ruc'].'</h4><br>
 	
 
 	
-	<p style="font-size: 10px; margin:  4px 0;"> <b>N. Orden:&nbsp; R-000'.$row1['rece_id'].'</b>&nbsp;&nbsp; - &nbsp;&nbsp;'.$row1['rece_fregistro'].'</p>
-	<p style="font-size: 10px; margin:  4px 0;"> Cliente:&nbsp; '.$row1['cliente_nombres'].'</p>
-	<p style="font-size: 10px; margin:  4px 0;"> Observaciones:&nbsp; '.$row1['rece_concepto'].'</p>
-	<p style="font-size: 10px; margin:  4px 0;"> Estado:&nbsp;<b> '.$row1['rece_estado'].'</p>
-	<p style="font-size: 10px; margin:  4px 0;"> F. Entrega:&nbsp; '.$row1['rece_fentrega'].'</p> <br>
+	<p style="font-size: 12px; margin:  4px 0;"> <b>N. Orden:&nbsp; R-000'.$row1['rece_id'].'</b>&nbsp;&nbsp; - &nbsp;&nbsp;'.$row1['rece_fregistro'].'</p>
+	<p style="font-size: 12px; margin:  4px 0;"> Cliente:&nbsp; '.$row1['cliente_nombres'].'</p>
+	<p style="font-size: 12px; margin:  4px 0;"> Cliente:&nbsp; '.$row1['cliente_celular'].'</p>
+	<p style="font-size: 12px; margin:  4px 0;"> Observaciones:&nbsp; '.$row1['rece_concepto'].'</p>
+	<p style="font-size: 12px; margin:  4px 0;"> Estado:&nbsp;<b> '.$row1['rece_estado'].'</p>
+	<p style="font-size: 12px; margin:  4px 0;"> F. Entrega:&nbsp; '.$row1['rece_fentrega'].'</p> <br>
 	
-	<p style="font-size: 10px; margin:  4px 0;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Datos del Equipo</b></p>
+	<p style="font-size: 12px; margin:  4px 0;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>EQUIPOS RECEPCIONADOS</b></p>
 
 	';
 	
@@ -103,9 +104,9 @@ $html.='
         <thead>
 
           <tr>  
-            <th style=" border-left:0px; font-size: 8px; border-right:0px;">EQUIPO</th>
-            <th style=" border-left:0px; font-size: 8px; border-right:0px; text-align:center;" >FALLA</th>
-			<th style=" border-left:0px; font-size: 8px; border-right:0px;">MONTO</th>
+            <th style=" border-left:0px; font-size: 10px; border-right:0px;">EQUIPO</th>
+            <th style=" border-left:0px; font-size: 10px; border-right:0px; text-align:center;" >FALLA</th>
+			<th style=" border-left:0px; font-size: 10px; border-right:0px;">MONTO</th>
 			           
           </tr>
 		 
@@ -130,9 +131,9 @@ $html.='
 				$html .= '
 				<tr>
 					
-					<td style=" border-left:0px; font-size: 8px; border-right:0px; border-top:0px;  border-bottom:0px;">'.$row2['equipo'].'</td>
-					<td style=" border-left:0px; font-size: 8px; border-right:0px; border-top:0px;  border-bottom:0px;">'.$row2['falla'].'</td>
-					<td style=" border-left:0px; font-size: 8px; border-right:0px; border-top:0px;  border-bottom:0px;">'.$row2['monto'].'</td>
+					<td style=" border-left:0px; font-size: 10px; border-right:0px; border-top:0px;  border-bottom:0px;">'.$row2['equipo'].'</td>
+					<td style=" border-left:0px; font-size: 10px; border-right:0px; border-top:0px;  border-bottom:0px;">'.$row2['falla'].'</td>
+					<td style=" border-left:0px; font-size: 10px; border-right:0px; border-top:0px;  border-bottom:0px;">'.$row2['monto'].'</td>
 					
 					
 				
@@ -149,7 +150,7 @@ $html.='
 		<br>
 		
 		
-		<p style="font-size: 10px; margin:  4px 0;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Insumos</b></p>
+		<p style="font-size: 12px; margin:  4px 0;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>INSUMOS A UTILIZAR</b></p>
 		';
 
 
@@ -166,9 +167,9 @@ $html.='
 			<thead>
 	
 			  <tr>  
-				<th style=" border-left:0px; font-size: 8px; border-right:0px;">DESCRIPCION</th>
-				<th style=" border-left:0px; font-size: 8px; border-right:0px; text-align:center;" >CANTIDAD</th>
-				<th style=" border-left:0px; font-size: 8px; border-right:0px;">MONTO</th>
+				<th style=" border-left:0px; font-size: 10px; border-right:0px;">DESCRIPCION</th>
+				<th style=" border-left:0px; font-size: 10px; border-right:0px;" >CANTIDAD</th>
+				<th style=" border-left:0px; font-size: 10px; border-right:0px;">MONTO</th>
 						   
 			  </tr>
 			 
@@ -201,9 +202,9 @@ $html.='
 					$html .= '
 					<tr>
 						
-						<td style=" border-left:0px; font-size: 8px; border-right:0px; border-top:0px;  border-bottom:0px;">'.$row3['producto_nombre'].'</td>
-						<td style=" border-left:0px; font-size: 8px; border-right:0px; border-top:0px;  border-bottom:0px;">'.$row3['cantidad'].'</td>
-						<td style=" border-left:0px; font-size: 8px; border-right:0px; border-top:0px;  border-bottom:0px;">'.$row3['subtotal'].'</td>
+						<td style=" border-left:0px; font-size: 10px; border-right:0px; border-top:0px;  border-bottom:0px;">'.$row3['producto_nombre'].'</td>
+						<td style=" border-left:0px; font-size: 10px; border-right:0px; border-top:0px;  border-bottom:0px;">'.$row3['cantidad'].'</td>
+						<td style=" border-left:0px; font-size: 10px; border-right:0px; border-top:0px;  border-bottom:0px;">'.$row3['subtotal'].'</td>
 						
 						
 					
@@ -231,11 +232,11 @@ $html.='
 
 		if ($row1['rece_adelanto'] > 0) {
 			$html.='
-		<h4 style="text-align:right;display: inline-block; font-size: 10px; margin: 0px;padding: 0px;  font-weight:normal;">Adelanto '.$row1['confi_moneda'].': '.$row1['rece_adelanto'].'</h4>
-		<h4 style="text-align:right;display: inline; font-size: 10px; margin: 0px;padding: 0px;  font-weight:normal;">Pendiente '.$row1['confi_moneda'].': '.$row1['rece_debe'].'</h4>
-		<h4 style="text-align:right; margin: 0px;padding: 0px; font-size: 10px; ">Monto '.$row1['confi_moneda'].': '.$row1['rece_monto'].'</h4><br>';
+		<h4 style="text-align:right;display: inline-block; font-size: 12px; margin: 0px;padding: 0px;  font-weight:normal;">Adelanto '.$row1['confi_moneda'].': '.$row1['rece_adelanto'].'</h4>
+		<h4 style="text-align:right;display: inline; font-size: 14px; margin: 0px;padding: 0px;  font-weight:normal;"><b>Pendiente '.$row1['confi_moneda'].': '.$row1['rece_debe'].'</b></h4>
+		<h4 style="text-align:right; margin: 0px;padding: 0px; font-size: 12px; ">Total: '.$row1['confi_moneda'].': '.$row1['rece_monto'].'</h4><br>';
 		}else{
-				$html.='<h4 style="text-align:right; margin: 0px;padding: 0px; ">Monto: '.$row1['confi_moneda'].' '.$row1['rece_monto'].'</h4><br>';
+				$html.='<h4 style="text-align:right; margin: 0px;padding: 0px; "><b>Total: '.$row1['confi_moneda'].' '.$row1['rece_monto'].'</b></h4><br>';
 			}
 
 		$html.='
