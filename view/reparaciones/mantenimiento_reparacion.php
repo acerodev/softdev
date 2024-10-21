@@ -100,8 +100,8 @@ session_start();
                             <input type="text" id="text_observa_d" class="form-control form-control-sm" placeholder="observacion" disabled>
                         </div>
                         <div class="col-lg-8 col-8">
-                            <label>Glosa:</label>
-                            <input type="text" id="text_glosa_d" class="form-control form-control-sm" onkeyup="mayus(this);" placeholder="glosa">
+                            <label>Comentario:</label>
+                            <input type="text" id="text_glosa_d" class="form-control form-control-sm" onkeyup="mayus(this);" placeholder="comentario" value="SIN">
                         </div>
                         <div class="col-lg-4   col-4" id="ocul_estado">
                             <label>Estado:</label>

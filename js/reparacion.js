@@ -389,9 +389,9 @@ function Registrar_reparacion(){
     let glosa_repa = document.getElementById('text_glosa_d').value;
     let estado_repa = document.getElementById('select_estado_d').value;
    
-    if (glosa_repa == "") {
+    /*if (glosa_repa == "") {
         return Swal.fire("Mensaje de Advertencia","Inserte un comentario para la reparacion","warning");
-    }
+    }*/
     if (estado_repa == "") {
         return Swal.fire("Mensaje de Advertencia","Inserte un estado de la reparacion","warning");
     }
