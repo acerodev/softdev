@@ -16,8 +16,8 @@
 
 
 -- Volcando estructura de base de datos para softdev
-CREATE DATABASE IF NOT EXISTS `u802871820_softdev` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `u802871820_softdev`;
+CREATE DATABASE IF NOT EXISTS `softdev` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `softdev`;
 
 -- Volcando estructura para tabla softdev.caja
 CREATE TABLE IF NOT EXISTS `caja` (
