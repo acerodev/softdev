@@ -295,7 +295,7 @@ $('#enviar_com_what').on('click', function () {
     //Verificar si el número es válido (solo números y longitud adecuada)
     if (numeromovil.match(/^\d+$/) && numeromovil.length >= 9 && numeromovil.length <= 15) {
       // Construir la URL de WhatsApp con el número y el mensaje deseado
-	  var mensaje = encodeURIComponent("Enlace para descargar el Comprobante de Venta: " + rutaPDFticket  );
+	  var mensaje = encodeURIComponent("Enlace para descargar el Comprobante de Venta: " + rutaPDFticket +" Buscar Equipo: "+"https://softdev.acerodev.com/view/buscar_equipo.php"  );
       var url = "https://wa.me/"+cod_pais+numeromovil+"?text=" + mensaje;
       
       // Abrir la ventana de WhatsApp en una nueva pestaña

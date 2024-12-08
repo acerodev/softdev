@@ -165,11 +165,11 @@ require_once '../../model/modelo_gasto.php';
                                <div class="row">
                                    <div class="col-lg-6 col-6">
                                        <label form="">Serie</label>
-                                       <input type="text" name="" class="form-control form-control-sm" id="text_serie" disabled>
+                                       <input type="text" name="" class="form-control form-control-sm" id="text_serie">
                                    </div>
                                    <div class="col-lg-6 col-6">
                                        <label form="">Numero</label>
-                                       <input type="text" name="" class="form-control form-control-sm" id="text_num_compro" disabled>
+                                       <input type="text" name="" class="form-control form-control-sm" id="text_num_compro">
                                    </div>
                                    
 

@@ -299,7 +299,7 @@ while ($row1 = $resultado->fetch_assoc()) {
                         $html .= ' 
                     </td>
 
-                    <td colspan="1" style="color:black; margin:  95em 0; font-size: 11px; text-align: left;  border-right:0px; border-left:0px; border-bottom:0px; border-top:0px;">Vibracion:<br>  
+                    <td colspan="1" style="color:black; margin:  95em 0; font-size: 11px; text-align: left;  border-right:0px; border-left:0px; border-bottom:0px; border-top:0px;">Scaner:<br>  
                             ';
                                 if ($row1['vibra'] == "Si") {
 
@@ -359,7 +359,7 @@ while ($row1 = $resultado->fetch_assoc()) {
                         $html .= ' 
                     </td>
 
-                    <td colspan="2" style="color:black; margin:  95em 0; font-size: 11px; text-align: left;   border-left:0px; border-bottom:0px; border-top:0px;">Sensor Prox.:<br>  
+                    <td colspan="2" style="color:black; margin:  95em 0; font-size: 11px; text-align: left;   border-left:0px; border-bottom:0px; border-top:0px;">Cargador/Cable:<br>  
                             ';
                                 if ($row1['sensor'] == "Si") {
 
@@ -484,7 +484,7 @@ while ($row1 = $resultado->fetch_assoc()) {
                             $html .= ' 
                     </td>
 
-                    <td colspan="1" style="color:black; margin:  95em 0; font-size: 11px; text-align: left;  border-right:0px; border-left:0px; border-bottom:0px; border-top:0px;">Huella:<br>  
+                    <td colspan="1" style="color:black; margin:  95em 0; font-size: 11px; text-align: left;  border-right:0px; border-left:0px; border-bottom:0px; border-top:0px;">Cabezal:<br>  
                             ';
                             if ($row1['huella'] == "Si") {
 
@@ -514,7 +514,7 @@ while ($row1 = $resultado->fetch_assoc()) {
                             $html .= ' 
                     </td>
 
-                    <td colspan="1" style="color:black; margin:  95em 0; font-size: 11px; text-align: left; border-right:0px;  border-left:0px; border-bottom:0px; border-top:0px;">Boton Home:<br>  
+                    <td colspan="1" style="color:black; margin:  95em 0; font-size: 11px; text-align: left; border-right:0px;  border-left:0px; border-bottom:0px; border-top:0px;">Flex:<br>  
                             ';
                             if ($row1['home'] == "Si") {
 
@@ -577,7 +577,7 @@ while ($row1 = $resultado->fetch_assoc()) {
                 </tr>
 
                 <tr>
-                <td colspan="1" style="color:black; margin:  95em 0; font-size: 11px; text-align: left; border-right:0px;    border-top:0px;">Camara:<br>  
+                <td colspan="1" style="color:black; margin:  95em 0; font-size: 11px; text-align: left; border-right:0px;    border-top:0px;">Camara/FaceID:<br>  
                         ';
                             if ($row1['camara'] == "Si") {
 
@@ -639,7 +639,7 @@ while ($row1 = $resultado->fetch_assoc()) {
                 </td>
 
 
-                <td colspan="1" style="color:black; margin:  95em 0; font-size: 11px; text-align: left; border-right:0px;  border-left:0px;  border-top:0px;">Auriculares:<br>  
+                <td colspan="1" style="color:black; margin:  95em 0; font-size: 11px; text-align: left; border-right:0px;  border-left:0px;  border-top:0px;">Auriculares/Altavoz:<br>  
                 ';
                     if ($row1['auricular'] == "Si") {
 
@@ -699,7 +699,7 @@ while ($row1 = $resultado->fetch_assoc()) {
                     $html .= ' 
                 </td>
 
-                <td colspan="1" style="color:black; margin:  95em 0; font-size: 11px; text-align: left; border-right:0px;  border-left:0px;  border-top:0px;">Face ID:<br>  
+                <td colspan="1" style="color:black; margin:  95em 0; font-size: 11px; text-align: left; border-right:0px;  border-left:0px;  border-top:0px;">Balum:<br>  
                 ';
                     if ($row1['face'] == "Si") {
 
@@ -946,9 +946,12 @@ while ($row1 = $resultado->fetch_assoc()) {
 
         $html .= '
         <p align="justify" style="font-size: 10.5px; color:#404040;">CLAUSULAS: </p>
-        <p align="justify" style="font-size: 10.5px; color:#404040;"> <b> 1. Evaluaci&oacute;n Previa: </b> Realizaremos una evaluaci&oacute;n inicial del/los dispositivo(s) para determinar las reparaciones necesarias antes de proceder. <br>      
-        <b> 2. Autorizaci&oacute;n: </b> Al firmar, el cliente autoriza a <b>'.$row1['confi_razon_social'].'</b> para realizar las intervenciones necesarias para reparar el/los dispositivo(s) entregado(s). <br>
-        <b> 3. Tiempo de Retiro: </b> Despu&eacute;s de que <b>'.$row1['confi_razon_social'].'</b> informe al cliente sobre el estado del/los dispositivo(s), el cliente tiene 60 d&iacute;as calendario para recogerlo(s), pasado este tiempo, no nos hacemos responsables por su conservaci&oacute;n o estado.
+        <p align="justify" style="font-size: 10.5px; color:#404040;"> 1: Si el dispositivo no se puede verificar, no asumimos responsabilidad por componentes que no funcionen correctamente despu&eacute;s de la reparaci&oacute;n. <br>      
+        2: Las reparaciones de los equipos no tienen garant&iacute;a en caso de golpes, humedad o mal uso por parte del cliente. <br>
+        3: En algunas reparaciones, no se usar&aacute;n piezas originales, sino compatibles y de calidad. <br>
+        4: La firma del cliente autoriza a '.$row1['confi_razon_social'].' para realizar trabajos en los dispositivos entregados. <br>
+        5: Despu&eacute;s de que '.$row1['confi_razon_social'].' informe al cliente sobre el estado de su dispositivo, si pasan 45 d&iacute;as, la empresa no se hace responsable del mismo. <br> 
+        6: TODAS NUESTRAS REPARACIONES TIENEN 3 MESE DE GARANTIA.
         
         </p>
         <br><br>

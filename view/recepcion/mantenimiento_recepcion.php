@@ -449,8 +449,10 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
                   <option value="">Seleccione</option>
                   <option value="EN REPARACION">EN REPARACION</option>
                   <option value="REPARADO">REPARADO</option>
-                  <option value="ENTREGADO">ENTREGADO</option>
                   <option value="NO REPARADO">NO REPARADO</option>
+                  <option value="ENTREGADO">ENTREGADO</option>
+                  <option value="POR ATENDER">POR ATENDER</option>
+                  <option value="SIN ENTREGAR">SIN ENTREGAR</option>
 
                 </select>
               </div>
@@ -986,7 +988,7 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
               <div class="col-3 col-xs-12">
                 <div class="form-group">
                   <i class="fas fa-power-off"></i>
-                  <label>Enciende:</label> <br>
+                  <label>Enciende/Btn Home:</label> <br>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Si" name="text_enciende_si" id="text_enciende_si">
                     <label class="form-check-label">Si</label>
@@ -1001,7 +1003,7 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
               <!-- TACTIL -->
               <div class="col-3 col-xs-12">
                 <div class="form-group"><i class="fas fa-hand-pointer"></i>
-                  <label>Tactil/Touch:</label> <br>
+                  <label>Tactil/Touch/Huella:</label> <br>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Si" name="text_tactil_si" id="text_tactil_si">
                     <label class="form-check-label">Si</label>
@@ -1034,8 +1036,8 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
               <!-- VIBRACION -->
               <div class="col-3 col-xs-12">
                 <div class="form-group">
-                  <i class="fas fa-phone-volume"></i>
-                  <label>Vibracion:</label> <br>
+                  <i class="fas fa-print"></i>
+                  <label>Scaner:</label> <br>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Si" name="text_vibra_si" id="text_vibra_si">
                     <label class="form-check-label">Si</label>
@@ -1069,7 +1071,7 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
               <div class="col-3 col-xs-12">
                 <div class="form-group">
                   <i class="fas fa-plug"></i>
-                  <label>Cable/Cargador:</label> <br>
+                  <label>Cargador/Cable:</label> <br>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Si" name="text_sensor_si" id="text_sensor_si">
                     <label class="form-check-label">Si</label>
@@ -1120,7 +1122,7 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
               <div class="col-3 col-xs-12">
                 <div class="form-group">
                   <i class="fas fa-wifi"></i>
-                  <label>Wifi:</label> <br>
+                  <label>WiFi:</label> <br>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Si" name="text_wifi_si" id="text_wifi_si">
                     <label class="form-check-label">Si</label>
@@ -1136,8 +1138,8 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
               <!-- HUELLA -->
               <div class="col-3 col-xs-12">
                 <div class="form-group">
-                  <i class="fas fa-fingerprint"></i>
-                  <label>Huella:</label> <br>
+                  <i class="fas fa-cog"></i>
+                  <label>Cabezal:</label> <br>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Si" name="text_huella_si" id="text_huella_si">
                     <label class="form-check-label">Si</label>
@@ -1152,8 +1154,8 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
               <!-- boton home -->
               <div class="col-3 col-xs-12">
                 <div class="form-group">
-                  <i class="fas fa-home"></i>
-                  <label>Btn Home:</label> <br>
+                  <i class="fas fa-screwdriver"></i>
+                  <label>Flex:</label> <br>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Si" name="text_home_si" id="text_home_si">
                     <label class="form-check-label">Si</label>
@@ -1187,7 +1189,7 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
               <div class="col-3 col-xs-12">
                 <div class="form-group">
                   <i class="fas fa-camera"></i>
-                  <label>Cámara:</label> <br>
+                  <label>Cámara/Face ID:</label> <br>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Si" name="text_camara_si" id="text_camara_si">
                     <label class="form-check-label">Si</label>
@@ -1255,7 +1257,7 @@ if (isset($_SESSION['S_IDUSUARIO'])) {
               <div class="col-3 col-xs-12">
                 <div class="form-group">
                   <i class="far fa-smile"></i>
-                  <label>Face Id:</label> <br>
+                  <label>Balum:</label> <br>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Si" name="text_face_si" id="text_face_si">
                     <label class="form-check-label">Si</label>

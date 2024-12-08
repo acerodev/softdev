@@ -63,6 +63,10 @@ function Listar_Recepcion() {
 					return "<center>" + '<span class="badge badge-success">REPARADO</span>'; +"</center>"
 				} else if (data == "NO REPARADO") {
 					return "<center>" + '<span class="badge badge-danger">NO REPARADO</span>'; +"</center>"
+				} else if (data == "POR ATENDER") {
+					return "<center>" + '<span class="badge badge-primary">POR ATENDER</span>'; +"</center>"
+				} else if (data == "SIN ENTREGAR") {
+					return "<center>" + '<span class="badge badge-warning">SIN ENTREGAR</span>'; +"</center>"
 				} else {
 					return "<center>" + '<span class="badge badge-warning">ENTREGADO</span>'; +"</center>"
 				}
@@ -81,7 +85,7 @@ function Listar_Recepcion() {
 	   {
 		"data": "rece_estado",//editar
 		render: function (data, type, row) {
-			if (data === "EN REPARACION" || data == "REPARADO" || data == "NO REPARADO") {
+			if (data === "EN REPARACION" || data == "REPARADO" || data == "NO REPARADO" || data == "POR ATENDER" || data == "SIN ENTREGAR") {
 				return "<center>" + "<span class='editar text-primary px-1' style='cursor:pointer;' title='Editar datos' ><i class= 'fa fa-edit'></i></span> <span class='imprimir text-danger px-1' style='cursor:pointer;' title='Imprimir Comprobante'><i class= 'fa fa-print'></i></span> <span class=' test_re text-info px-1' style='cursor:pointer;'  title='Test del equipo' ><i class= 'fas fa-vial'></i></span>" + "</center>"
 			} else {
 				return "<center>" + "<span class='ver_recep text-info px-1' style='cursor:pointer;' title='Ver datos'><i class= 'fa fa-eye'></i></span><span class=' imprimir text-danger px-1' style='cursor:pointer;'  title='Imprimir Comprobante' ><i class= 'fa fa-print'></i></span><span class=' text-secundary px-1'   ><i class= 'fas fa-vial'></i></span>" + "</center>"
